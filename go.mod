@@ -1,4 +1,4 @@
-module github.com/vsapronov/terraform-provider-mongodb
+module github.com/vsapronov/terraform-provider-mongodb2
 
 go 1.17
 

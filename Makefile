@@ -22,7 +22,7 @@ endif
 
 HOSTNAME=registry.terraform.io
 NAMESPACE=vsapronov
-NAME=mongodb
+NAME=mongodb2
 VERSION=9.9.9
 ## on linux base os
 TERRAFORM_PLUGINS_DIRECTORY=~/.terraform.d/plugins/${HOSTNAME}/${NAMESPACE}/${NAME}/${VERSION}/${OS_ARCH}

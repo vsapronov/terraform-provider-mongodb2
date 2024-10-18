@@ -14,8 +14,8 @@ This repository is a Terraform Mongodb for [Terraform](https://www.terraform.io)
 1. Build the provider using the `make install` command:
 
 ````bash
-git clone https://github.com/vsapronov/terraform-provider-mongodb
-cd terraform-provider-mongodb
+git clone https://github.com/vsapronov/terraform-provider-mongodb2
+cd terraform-provider-mongodb2
 make install
 ````
 
