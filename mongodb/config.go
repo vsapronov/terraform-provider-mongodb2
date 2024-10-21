@@ -142,13 +142,13 @@ func (c *ClientConfig) getClientAuth() (*options.Credential, error) {
 			return nil, errors.New("The PLAIN auth schema requires user and password to be provided")
 		}
 		return &options.Credential{AuthMechanism: "PLAIN", AuthSource: c.DB, Username: c.Username, Password: c.Password}, nil
-	case "MONGODB_X509":
+	case "MONGODB-X509":
 		if c.DB != "$external" {
 			return nil, fmt.Errorf("The MONGODB-X509 auth schema requires the $external auth database, can't use %s", c.DB)
 		}
 		return &options.Credential{AuthMechanism: "MONGODB-X509", AuthSource: "$external"}, nil
 	default:
-		return nil, fmt.Errorf("Unknown auth schema: %s, should be PLAIN or MONGODB_X509", c.AuthSchema)
+		return nil, fmt.Errorf("Unknown auth schema: %s, should be PLAIN or MONGODB-X509", c.AuthSchema)
 	}
 }
 

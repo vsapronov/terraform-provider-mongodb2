@@ -36,7 +36,7 @@ func Provider() *schema.Provider {
 				Type:        schema.TypeString,
 				Optional:    true,
 				DefaultFunc: schema.EnvDefaultFunc("MONGODB_AUTH_SCHEMA", "PLAIN"),
-				Description: "The authentication schema: PLAIN or MONGODB_X509",
+				Description: "The authentication schema: PLAIN or MONGODB-X509",
 			},
 			"username": {
 				Type:        schema.TypeString,
@@ -54,13 +54,13 @@ func Provider() *schema.Provider {
 				Type:        schema.TypeString,
 				Optional:    true,
 				DefaultFunc: schema.EnvDefaultFunc("MONGODB_X509_CERT", ""),
-				Description: "The x509 authentication certificate, could contain both certificate and key or just certificate; applicable only if auth_schema is MONGODB_X509",
+				Description: "The x509 authentication certificate, could contain both certificate and key or just certificate; applicable only if auth_schema is MONGODB-X509",
 			},
 			"auth_x509_key": {
 				Type:        schema.TypeString,
 				Optional:    true,
 				DefaultFunc: schema.EnvDefaultFunc("MONGODB_X509_KEY", ""),
-				Description: "The x509 authentication key; applicable only if auth_schema is MONGODB_X509",
+				Description: "The x509 authentication key; applicable only if auth_schema is MONGODB-X509",
 			},
 			"auth_database": {
 				Type:        schema.TypeString,
