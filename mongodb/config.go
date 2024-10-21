@@ -141,7 +141,7 @@ func (c *ClientConfig) getClientAuth() (*options.Credential, error) {
 		if c.Username == "" || c.Password == "" {
 			return nil, errors.New("The PLAIN auth schema requires user and password to be provided")
 		}
-		return &options.Credential{AuthMechanism: "PLAIN", AuthSource: c.DB, Username: c.Username, Password: c.Password}, nil
+		return &options.Credential{AuthSource: c.DB, Username: c.Username, Password: c.Password}, nil
 	case "MONGODB-X509":
 		if c.DB != "$external" {
 			return nil, fmt.Errorf("The MONGODB-X509 auth schema requires the $external auth database, can't use %s", c.DB)
